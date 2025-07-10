@@ -1,0 +1,18 @@
+current directory: /Users/yunalee/Desktop/old/doodlelab/DoodleLabBrushParser/example/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+/Users/yunalee/.rbenv/versions/3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/yunalee/Desktop/old/doodlelab/DoodleLabBrushParser/example/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250709-55937-mzkjbc sitelibdir\=./.gem.20250709-55937-mzkjbc clean
+
+current directory: /Users/yunalee/Desktop/old/doodlelab/DoodleLabBrushParser/example/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250709-55937-mzkjbc sitelibdir\=./.gem.20250709-55937-mzkjbc
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/yunalee/Desktop/old/doodlelab/DoodleLabBrushParser/example/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250709-55937-mzkjbc sitelibdir\=./.gem.20250709-55937-mzkjbc install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20250709-55937-mzkjbc
+
+current directory: /Users/yunalee/Desktop/old/doodlelab/DoodleLabBrushParser/example/vendor/bundle/ruby/3.3.0/gems/nkf-0.2.0/ext/nkf
+make DESTDIR\= sitearchdir\=./.gem.20250709-55937-mzkjbc sitelibdir\=./.gem.20250709-55937-mzkjbc clean
