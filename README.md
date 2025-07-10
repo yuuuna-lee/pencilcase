@@ -1,57 +1,105 @@
-# 필통 프로젝트
+# PencilCase – Procreate Brush 시뮬레이터
 ![Image](https://github.com/user-attachments/assets/5af63baa-ed09-46c4-9d50-a1c964bdcd74)
 
-## 프로젝트 소개
 
-필통 프로젝트는 아이패드 드로잉 앱 Procreate에서 사용하는 브러시 파일(.brush)을 분석하고, 실제로 모바일 앱(React Native)에서 그 브러시로 그림을 그릴 수 있게 해주는 오픈소스 도구입니다.
-
-Procreate의 브러시 파일은 공식적으로 공개된 구조가 아니기 때문에, 다양한 브러시 파일을 직접 분석하여 그 안에 들어있는 텍스처(모양), 속성(크기, 불투명도, 간격 등)을 추출하고, 실제 드로잉에 사용할 수 있도록 구현했습니다.
-
-이 도구를 사용하면, Procreate에서 만든 자신만의 브러시를 React Native 기반의 앱에서 불러와서, 실제로 그림을 그려보고, 다양한 옵션(색상, 크기, 간격 등)을 조절하며 테스트할 수 있습니다. 전문가가 아니더라도, 자신만의 브러시를 직접 만들어보고, 그 효과를 실시간으로 확인할 수 있습니다.
+Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할 수 있는 모바일 기반 브러시 테스트 툴입니다.  
+비공식 바이너리 포맷을 직접 리버스 엔지니어링하고, React Native + Skia + Swift 기반의 Turbo Native Module로 구현했습니다.
 
 ---
 
-## 주요 기능
+## 1. 프로젝트 개요
 
-- Procreate .brush 파일 파싱 및 내부 텍스처/속성 추출
-- shape.png(브러시 모양) 이미지의 투명도/알파 변환 처리
-- 브러시 크기, 색상, 불투명도, 간격 등 실시간 조절
-- 실제 브러시처럼 부드럽게 이어지는 드로잉 구현
-- 3D 브러시, 한글 파일명 등 다양한 브러시 파일 지원
-- iOS TurboModule(네이티브) + React Native + Skia 기반 고성능 렌더링
-- 파일 선택, 캔버스 지우기, 배경색 전환 등 인터랙티브 UI 제공
+- 사용자는 브러시를 구매하기 전에, 실제 질감을 직접 확인해보고 싶어합니다.
+- 하지만 Procreate의 `.brush` 파일은 문서화되지 않았고, 미리보기 기능도 부족합니다.
+- 이 프로젝트는 **실제 브러시의 텍스처와 동작을 시뮬레이션할 수 있는 환경**을 제공합니다.
 
 ---
 
-## 기술적 도전과 해결
+## 2. 주요 기능
 
-### 1. Procreate 브러시 파일 구조 분석
-- 공식 명세가 없는 .brush 파일을 직접 분석하여, 내부가 ZIP 아카이브임을 확인하고, shape.png, Brush.archive 등 핵심 파일을 추출했습니다.
-- Brush.archive가 바이너리 plist 등 다양한 포맷으로 저장되어 있어, 단순 문자열 파싱이 아닌 NSPropertyListSerialization 등 다양한 방식으로 파싱 로직을 고도화했습니다.
-- 파일명 및 내부 파일이 한글 등 비영어권 문자인 경우에도 UTF-8 인코딩을 명시적으로 처리하여 모든 브러시 파일이 정상적으로 열리도록 개선했습니다.
-
-### 2. 네이티브 모듈 연동 및 빌드 환경 문제
-- React Native New Architecture 환경에서 Swift/ObjC로 작성한 브러시 파서 네이티브 모듈을 TurboModule로 연동하는 과정에서 자동 연결이 되지 않아 수동 설정 및 빌드 에러, 의존성 충돌을 반복적으로 해결했습니다.
-- CocoaPods로 의존성 관리를 일원화하고, Apple Silicon 환경에서의 아키텍처 충돌도 직접 해결하여 네이티브 빌드 시스템에 대한 실전 경험을 쌓았습니다.
-
-### 3. 실시간 렌더링 및 드로잉 최적화
-- Skia 엔진을 활용해 shape.png 텍스처를 실시간으로 렌더링하는 과정에서 검은색 배경이 투명하게 처리되지 않는 문제를 CoreImage의 CIMaskToAlpha 필터로 해결했습니다.
-- 드로잉 시, 사용자가 빠르게 그릴 때도 선이 끊기지 않도록 두 점 사이에 필요한 만큼 점을 보간하여 항상 일정한 간격으로 스탬프가 찍히게 개선했습니다.
-- 3D 브러시의 경우, 스탬프 간격과 투명도를 동적으로 조절하여 부드럽고 자연스러운 브러시 효과를 구현했습니다.
-
-### 4. 크로스플랫폼 및 다양한 파일 구조 대응
-- React Native/Skia, iOS TurboModule 등 다양한 플랫폼에서 동일한 렌더링 로직이 동작하도록 구조를 통일했습니다.
-- 내부 파일 구조가 다른 다양한 .brush 파일(3D, 일반, 한글명 등)도 모두 정상적으로 파싱 및 렌더링할 수 있도록 유연한 파서와 예외 처리를 설계했습니다.
-
-### 5. 디버깅 및 유지보수성 강화
-- 각 단계별로 상세한 디버깅 로그와 UI 상태 표시를 추가하여 문제 발생 시 빠르게 원인을 파악하고 대응할 수 있도록 했습니다.
+- `.brush` 파일 구조 분석 및 파싱
+- Swift 기반 Turbo Native Module로 브러시 데이터 전달
+- Skia 기반 실시간 렌더링
+- 다양한 브러시 구조(2D/3D 등) 대응
+- 브러시 속성별 시각화 테스트
 
 ---
 
-## 사용법
+## 3. 기술 스택
 
-1. 앱에서 .brush 파일을 선택합니다.
-2. 내부에서 shape.png, Brush.archive 등 파일을 자동으로 추출/파싱합니다.
-3. shape.png는 CoreImage로 알파 변환 처리 후 base64로 변환되어 JS로 전달됩니다.
-4. React Native/Skia에서 shape 텍스처를 불러와, 브러시 크기, 색상, 간격 등 옵션을 조절하며 실시간으로 그림을 그릴 수 있습니다.
-5. 캔버스 지우기, 배경색 전환 등 다양한 부가 기능도 제공합니다.
+- React Native (Bare workflow)
+- React Native Skia
+- Swift (Turbo Native Module)
+- Hex Editor 기반 리버스 엔지니어링
+- TypeScript + Zustand 상태관리
+
+---
+
+## 4. 아키텍처 요약
+
+[사용자] → [브러시 업로드]
+↓
+[BrushParser.swift] ← .brush 파싱
+↓
+[TurboModule → RN]
+↓
+[Skia Canvas에서 렌더링]
+
+yaml
+복사
+편집
+
+---
+
+## 5. 시연 영상
+
+> 아래 GIF는 브러시 시뮬레이션 동작 예시입니다.
+
+(✅ 여기 GIF가 잘 들어 있다면 그대로 두면 좋고, 없다면 markdown에 이미지 추가)
+
+```md
+![시연 GIF](./demo/demo.gif)
+6. 기술적 문제와 해결 과정
+(1) TurboModule 연동 실패
+자동 연결이 되지 않아 수동 설정 필요
+
+Swift Package Manager와 CocoaPods 충돌 → CocoaPods로 일원화
+
+Apple Silicon에서 아키텍처 충돌 해결 (arch -x86_64)
+
+(2) .brush 파일 구조 불명확
+Hex Editor로 구조 분석, .archive, shape.png, grain.png 추출
+
+내부에 3D 브러시 포함 시 별도 분기 처리
+
+(3) 렌더링 정확도 문제
+알파 채널이 예상과 다르게 렌더됨
+
+luminance-based alpha로 재해석해 반전 문제 해결
+
+7. 폴더 구조
+bash
+복사
+편집
+pencilcase/
+├── ios/                    # Swift 기반 BrushParser TurboModule
+├── src/
+│   ├── components/         # Skia Canvas, 브러시 UI
+│   ├── store/              # Zustand 상태관리
+│   └── utils/              # 브러시 파라미터 해석 유틸
+└── README.md
+8. 향후 계획
+.brushset 파일 지원
+
+Clip Studio .sut 포맷 대응
+
+웹 기반 버전 병렬 개발 중
+
+9. 개발 배경
+이 프로젝트는 “그래픽 엔지니어링” 역량을 입증하기 위한 실전형 포트폴리오로,
+단순한 코드 구현이 아닌 문서화되지 않은 포맷의 분석, 네이티브 연동, 렌더링 최적화까지 경험한 과정을 담고 있습니다.
+사용자 피드백을 반영하고, 실사용 시나리오에 기반해 반복 개선했습니다.
+
+10. 개발자 정보
+GitHub: yuuuna-lee
+Contact: iyuna.dev@gmail.com
