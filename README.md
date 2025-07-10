@@ -36,20 +36,7 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 ---
 
 ## 유저플로우
-[사용자]
-   │
-   ▼
-[브러시 업로드 (.brush)]
-   │
-   ▼
-[BrushParser.swift 에서 파싱]
-   │
-   ▼
-[TurboModule → React Native로 전달]
-   │
-   ▼
-[Skia Canvas에서 실시간 렌더링]
-
+<img width="390" height="335" alt="Image" src="https://github.com/user-attachments/assets/6e271571-88da-4c5e-871c-624544ddc4f6" />
 
 ## 5. 시연 영상
 
