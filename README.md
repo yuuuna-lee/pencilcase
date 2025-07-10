@@ -1,5 +1,5 @@
 # 필통 프로젝트
-![Image](https://github.com/user-attachments/assets/398db90e-31c8-4bc3-bdb0-a5586ec1b603)
+![Image](https://github.com/user-attachments/assets/5af63baa-ed09-46c4-9d50-a1c964bdcd74)
 
 ## 프로젝트 소개
 
