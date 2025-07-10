@@ -1,6 +1,5 @@
 # 필통 프로젝트
-
-![필통 프로젝트 시연](@pencilcase/시연.gif)
+![Image](https://github.com/user-attachments/assets/aea6c3c9-d3ea-400a-a753-e24df489dee9)
 
 ## 프로젝트 소개
 
