@@ -1,6 +1,4 @@
 # PencilCase – Procreate Brush 시뮬레이터
-![Image](https://github.com/user-attachments/assets/5af63baa-ed09-46c4-9d50-a1c964bdcd74)
-
 
 Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할 수 있는 모바일 기반 브러시 테스트 툴입니다.  
 비공식 바이너리 포맷을 직접 리버스 엔지니어링하고, React Native + Skia + Swift 기반의 Turbo Native Module로 구현했습니다.
@@ -39,13 +37,10 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 <img width="390" height="335" alt="Image" src="https://github.com/user-attachments/assets/6e271571-88da-4c5e-871c-624544ddc4f6" />
 
 ## 5. 시연 영상
-
-> 아래 GIF는 브러시 시뮬레이션 동작 예시입니다.
-
-(✅ 여기 GIF가 잘 들어 있다면 그대로 두면 좋고, 없다면 markdown에 이미지 추가)
+![Image](https://github.com/user-attachments/assets/5af63baa-ed09-46c4-9d50-a1c964bdcd74)
 
 ```md
-![시연 GIF](./demo/demo.gif)
+
 6. 기술적 문제와 해결 과정
 (1) TurboModule 연동 실패
 자동 연결이 되지 않아 수동 설정 필요
