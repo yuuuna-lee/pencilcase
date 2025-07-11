@@ -68,15 +68,7 @@ luminance-based alpha로 재해석해 반전 문제 해결
 
 ## 7. 폴더 구조
 
-``
-pencilcase/
-├── ios/                    # Swift 기반 BrushParser TurboModule
-├── src/
-│   ├── components/         # Skia Canvas, 브러시 UI
-│   ├── store/              # Zustand 상태관리
-│   └── utils/              # 브러시 파라미터 해석 유틸
-└── README.md
-``
+<img width="344" height="404" alt="Image" src="https://github.com/user-attachments/assets/3d023459-155b-41e7-ac22-7975ffb1e3a1" />
 
 ## 8. 향후 계획
 .brushset 파일 지원
