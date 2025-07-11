@@ -47,7 +47,6 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 ## 5. 시연 영상
 ![Image](https://github.com/user-attachments/assets/e6e94464-636a-41f7-a9fc-813eb26a55ea)
 
-```md
 
 6. 기술적 문제와 해결 과정
 (1) TurboModule 연동 실패
