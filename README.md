@@ -53,22 +53,23 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 
 
 ## 6. 기술적 문제와 해결 과정
-(1) TurboModule 연동 실패
-자동 연결이 되지 않아 수동 설정 필요
 
-Swift Package Manager와 CocoaPods 충돌 → CocoaPods로 일원화
+# (1) Turbo Native Module 구현 및 최적화
+Swift 기반 네이티브 모듈(DoodleLabBrushParser.h/.m)의 수동 브릿지 구현
+iOS 빌드 시스템 통합을 위해 CocoaPods 기반으로 의존성 관리 일원화
+Apple Silicon 환경에서의 아키텍처 호환성 문제 해결 (arch -x86_64 활용)
 
-Apple Silicon에서 아키텍처 충돌 해결 (arch -x86_64)
+# (2) Procreate 브러시 파일 구조 분석
+Hex Editor를 통한 .brush 바이너리 포맷 리버스 엔지니어링
+내부 구조 파악: .archive 컨테이너, shape.png, grain.png 에셋 추출
+2D/3D 브러시 타입에 따른 분기 처리 로직 구현
+브러시 속성 데이터 파싱 및 JavaScript 브릿지 구현
 
-(2) .brush 파일 구조 불명확
-Hex Editor로 구조 분석, .archive, shape.png, grain.png 추출
+# (3) Skia 기반 렌더링 엔진 최적화
+브러시 텍스처의 알파 채널 렌더링 정밀도 개선
+luminance-based 알파 채널 계산 방식 적용으로 정확한 브러시 질감 구현
+실시간 렌더링 성능 최적화를 위한 캐싱 전략 적용
 
-내부에 3D 브러시 포함 시 별도 분기 처리
-
-(3) 렌더링 정확도 문제
-알파 채널이 예상과 다르게 렌더됨
-
-luminance-based alpha로 재해석해 반전 문제 해결
 
 ## 7. 폴더 구조
 
