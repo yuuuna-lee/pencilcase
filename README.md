@@ -34,9 +34,13 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 ## 3. 기술 스택
 
 프론트엔드: React Native (Bare workflow), TypeScript
+
 그래픽스: React Native Skia를 활용한 실시간 브러시 렌더링
+
 네이티브 개발: Swift 기반 Turbo Native Module 구현
+
 리버스 엔지니어링: Hex Editor를 활용한 비공식 바이너리 포맷(.brush) 분석
+
 개발 도구: CocoaPods, Gradle
 
 ---
