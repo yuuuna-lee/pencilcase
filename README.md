@@ -9,9 +9,11 @@
 
 
 Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할 수 있는 모바일 기반 브러시 테스트 툴입니다.  
+
 비공식 바이너리 포맷을 직접 리버스 엔지니어링하고, React Native + Skia + Swift 기반의 Turbo Native Module로 구현했습니다.
 
 판매자가 브러쉬를 업로드하면 그를 파싱해 프로크리에이트와 같은 환경으로 재현해내도록 만들고자 하였습니다.
+
 이 프로젝트는 그를 위한 초안으로 브러쉬를 파싱하고 프로크리에이트와 같은 환경으로 브러쉬를 재현해내는 것을 성공하였습니다.
 
 
@@ -97,4 +99,5 @@ Clip Studio .sut 포맷 대응
 
 ## 10. 개발자 정보
 GitHub: yuuuna-lee
+
 Contact: yuunalee1050@gmail.com
