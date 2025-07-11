@@ -48,7 +48,7 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 ![Image](https://github.com/user-attachments/assets/e6e94464-636a-41f7-a9fc-813eb26a55ea)
 
 
-6. 기술적 문제와 해결 과정
+## 6. 기술적 문제와 해결 과정
 (1) TurboModule 연동 실패
 자동 연결이 되지 않아 수동 설정 필요
 
@@ -66,10 +66,9 @@ Hex Editor로 구조 분석, .archive, shape.png, grain.png 추출
 
 luminance-based alpha로 재해석해 반전 문제 해결
 
-7. 폴더 구조
-bash
-복사
-편집
+## 7. 폴더 구조
+
+``
 pencilcase/
 ├── ios/                    # Swift 기반 BrushParser TurboModule
 ├── src/
@@ -77,18 +76,22 @@ pencilcase/
 │   ├── store/              # Zustand 상태관리
 │   └── utils/              # 브러시 파라미터 해석 유틸
 └── README.md
-8. 향후 계획
+``
+
+## 8. 향후 계획
 .brushset 파일 지원
 
 Clip Studio .sut 포맷 대응
 
+백엔드와의 연동으로 실제 브러쉬 마켓 생성
+
 웹 기반 버전 병렬 개발 중
 
-9. 개발 배경
+## 9. 개발 배경
 이 프로젝트는 “그래픽 엔지니어링” 역량을 입증하기 위한 실전형 포트폴리오로,
 단순한 코드 구현이 아닌 문서화되지 않은 포맷의 분석, 네이티브 연동, 렌더링 최적화까지 경험한 과정을 담고 있습니다.
 사용자 피드백을 반영하고, 실사용 시나리오에 기반해 반복 개선했습니다.
 
-10. 개발자 정보
+## 10. 개발자 정보
 GitHub: yuuuna-lee
 Contact: iyuna.dev@gmail.com
