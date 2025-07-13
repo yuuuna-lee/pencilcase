@@ -15,29 +15,6 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 판매자가 브러쉬를 업로드하면 그를 파싱해 프로크리에이트와 같은 환경으로 재현해내도록 만들고자 하였습니다.
 
 이 프로젝트는 그를 위한 초안으로 브러쉬를 파싱하고 프로크리에이트와 같은 환경으로 브러쉬를 재현해내는 것을 성공하였습니다.
-
-
-
-## 실행 방법 (How to Run)
-
-1.  **Clone the repository:**
-    ```
-    git clone
-    ```
-
-2.  **Install dependencies:**
-    ```
-    npm install
-    ```
-
-3.  **Install iOS Pods:**
-    ```
-    cd ios && pod install
-    ```
-
-4.  **Run the app:**
-    ```
-    npx react-native run-ios
     ```
 
 ### **⚠️ 중요: 테스트 방법**
