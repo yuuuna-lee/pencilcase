@@ -19,7 +19,7 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 
 ### **⚠️ 중요: 테스트 방법**
 
-현재 버전은 `DocumentPicker`를 통한 외부 파일 로딩 시 발생하는 일부 네이티브 라이브러리 이슈를 해결하고 있습니다. 따라서, 현재는 프로젝트 내에 포함된 **샘플 브러시로만 테스트가 가능합니다.**
+현재 버전은 프로크리에이트에 내장된 shape 나 grain은 가져올 수 없어, 내장된 소스를 사용히는 경우는 복원이 불가합니다. 그래서 사용시에는 DoodleLabBrushParser/example/src/assets 파일에 있는 브러쉬를 사용해주시길 바랍니다.
 
 `[프로젝트 폴더]DoodleLabBrushParser/example/src/assets` 폴더 안에 있는 `.brush` 파일들을 사용해주세요.
 
