@@ -100,6 +100,7 @@ Clip Studio .sut 포맷 대응
 ## 10. 한계점 
 프로크리에이트에 내장된 shape 나 grain은 가져올 수 없어, 내장된 소스를 사용히는 경우는 복원이 불가합니다.
 그래서 사용시에는 DoodleLabBrushParser/example/src/assets 파일에 있는 브러쉬를 사용해주시길 바랍니다. 
+이 브러쉬들의 경우 커스텀한 shpae.png와 grain을 사용하는 경우로 일반적으로 우리가 구매하게 되는 커스텀 브러쉬들이 이에 속합니다
 
 ## 개발자 정보
 GitHub: yuuuna-lee
