@@ -102,6 +102,8 @@ Clip Studio .sut 포맷 대응
 그래서 사용시에는 DoodleLabBrushParser/example/src/assets 파일에 있는 브러쉬를 사용해주시길 바랍니다. 
 이 브러쉬들의 경우 커스텀한 shpae.png와 grain을 사용하는 경우로 일반적으로 우리가 구매하게 되는 커스텀 브러쉬들이 이에 속합니다
 
+브러쉬에 색을 입히는 경우 미세한 브러쉬의 질감이 변하게 되는 경우가 많아 관련된 메서드들은 제거해둔 상태입니다. 
+
 ## 개발자 정보
 GitHub: yuuuna-lee
 
