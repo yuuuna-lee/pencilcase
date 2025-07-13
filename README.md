@@ -19,9 +19,9 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 
 ### **⚠️ 중요: 테스트 방법**
 
-현재 버전은 프로크리에이트에 내장된 shape 나 grain은 가져올 수 없어, 내장된 소스를 사용히는 경우는 복원이 불가합니다. 그래서 사용시에는 DoodleLabBrushParser/example/src/assets 파일에 있는 브러쉬를 사용해주시길 바랍니다.
+현재 버전은 프로크리에이트에 내장된 shape 나 grain은 가져올 수 없어, 내장된 소스를 사용히는 경우는 복원이 불가합니다.
 
-`[프로젝트 폴더]DoodleLabBrushParser/example/src/assets` 폴더 안에 있는 `.brush` 파일들을 사용해주세요.
+사용시에는 `DoodleLabBrushParser/example/src/assets` 폴더 안에 있는 `.brush` 파일들을 사용해주세요.
 
 
 ---
