@@ -97,7 +97,11 @@ Clip Studio .sut 포맷 대응
 단순한 코드 구현이 아닌 문서화되지 않은 포맷의 분석, 네이티브 연동, 렌더링 최적화까지 경험한 과정을 담고 있습니다.
 사용자 피드백을 반영하고, 실사용 시나리오에 기반해 반복 개선했습니다.
 
-## 10. 개발자 정보
+## 10. 한계점 
+프로크리에이트에 내장된 shape 나 grain은 가져올 수 없어, 내장된 소스를 사용히는 경우는 복원이 불가합니다.
+그래서 사용시에는 DoodleLabBrushParser/example/src/assets 파일에 있는 브러쉬를 사용해주시길 바랍니다. 
+
+## 개발자 정보
 GitHub: yuuuna-lee
 
 Contact: yuunalee1050@gmail.com
