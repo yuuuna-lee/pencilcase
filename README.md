@@ -22,7 +22,7 @@ Procreate의 `.brush` 파일을 분석하고, 실시간으로 시뮬레이션할
 
 1.  **Clone the repository:**
     ```
-    git clone [https://github.com/yuuuna-lee/pencilcase.git](https://github.com/yuuuna-lee/pencilcase.git)
+    git clone [https://github.com/yuuuna-lee/pencilcase.git](https://github.com/yuuuna-lee/pencilcase.git](https://github.com/yuuuna-lee/pencilcase.git)
     ```
 
 2.  **Install dependencies:**
