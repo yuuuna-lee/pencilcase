@@ -14,6 +14,10 @@ Procreate의 .brush 파일을 분석하고, 실시간으로 시뮬레이션할 �
 사용시에는 DoodleLabBrushParser/example/src/assets 폴더 안에 있는 .brush 파일들을 사용해주세요.
 이 브러쉬들의 경우 커스텀한 shape.png와 grain을 사용하는 경우로 일반적으로 우리가 구매하게 되는 커스텀 브러쉬들이 이에 속합니다.
 
+## 0. 시연 영상
+https://github.com/user-attachments/assets/a991ccf6-7585-4af4-a32c-d0d907856927
+
+
 ## 1. 프로젝트 개요
 
 사용자는 브러시를 구매하기 전에, 실제 질감을 직접 확인해보고 싶어합니다.
