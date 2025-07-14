@@ -1,4 +1,4 @@
-# PencilCase – Procreate Brush 시뮬레이터
+# 프로젝트 필통 : 프로크리에이트 브러쉬 시식코너
 
 <img width="491" height="401" alt="Image" src="https://github.com/user-attachments/assets/1cc61470-589e-4573-8bd3-218dee7a2623" />
 
@@ -15,7 +15,7 @@ Procreate의 .brush 파일을 분석하고, 실시간으로 시뮬레이션할 �
 이 브러쉬들의 경우 커스텀한 shape.png와 grain을 사용하는 경우로 일반적으로 우리가 구매하게 되는 커스텀 브러쉬들이 이에 속합니다.
 
 ## 0. 시연 영상
-![Image](https://github.com/user-attachments/assets/90d8d117-ed51-4243-9a92-a776652c2cf5)
+![Image](https://github.com/user-attachments/assets/60f6c095-a388-48cf-873b-4d9c5fe4a684)
 
 
 ## 1. 프로젝트 개요
