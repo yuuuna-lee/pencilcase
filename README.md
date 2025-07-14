@@ -93,29 +93,30 @@ https://github.com/user-attachments/assets/a991ccf6-7585-4af4-a32c-d0d907856927
 
 ## 5. 프로젝트 구조
 
-```typescript
-// 주요 인터페이스
-interface ProcreateBrushData {
-  name?: string;
-  shapeTextureBase64?: string;
-  grainTextureBase64?: string;
-  is3DBrush?: boolean;
-  
-  // 브러시 동작 파라미터
-  paintSize?: number;
-  paintOpacity?: number;
-  plotSpacing?: number;
-  
-  // 다이나믹스
-  pressureSize?: number;
-  pressureOpacity?: number;
-  velocitySaturation?: number;
-  
-  // 3D 브러시 속성
-  metallicScale?: number;
-  roughnessScale?: number;
-  heightScale?: number;
-}
+```
+├── src/ # TypeScript 소스
+│ ├── index.ts # 메인 인터페이스 및 타입 정의
+│ └── NativeDoodleLabBrushParser.ts
+│
+├── ios/ # iOS 네이티브 모듈
+│ ├── DoodleLabBrushParser.h # Objective-C 헤더
+│ └── DoodleLabBrushParser.m # 브러시 파싱 구현
+│
+└── example/ # 예제 프로젝트
+├── src/
+│ ├── App.tsx # 메인 앱
+│ ├── components/
+│ │ ├── DrawingCanvas.tsx # Skia 캔버스 구현
+│ │ ├── BrushFilePicker.tsx # 브러시 파일 선택
+│ │ └── CustomSlider.tsx # 브러시 설정 컨트롤
+│ └── assets/ # 테스트용 브러시 파일
+│ ├── 3D.brush
+│ ├── hair.brush
+│ └── jung.brush
+│
+└── ios/ # iOS 예제 앱
+└── DoodleLabBrushParserExample/
+└── AppDelegate.swift
 ```
 
 ## 6. 한계점
